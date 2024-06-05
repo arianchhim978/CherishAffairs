@@ -1,0 +1,30 @@
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:grey solid 1px;
+}
+ul,a{
+   list-style: none;
+   display:flex;
+   gap:20px;
+   color:grey;
+   text-decoration: none;
+
+
+}
+.button{
+height:40px;
+width:100px;
+border-radius:8px;
+border:black solid 1px;
+background-color:rgb(149, 251, 77);
+
+}
+h1{
+    font-size:25px;
+}
+body{
+    background-color:rgb(149,251,77);
+    font-family: "Playfair Display", serif;
+}
