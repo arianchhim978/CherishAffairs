@@ -2,12 +2,29 @@
 <html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GroomedGlamour</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+    <script>
+      // Your Firebase web app's Firebase configuration
+      const firebaseConfig = {
+  apiKey: "AIzaSyBB0vKInEx5HXpumHUaxLTlr6tIRWZkURE",
+  authDomain: "groomedglamour.firebaseapp.com",
+  projectId: "groomedglamour",
+  storageBucket: "groomedglamour.appspot.com",
+  messagingSenderId: "731631235304",
+  appId: "1:731631235304:web:772609644b57c037a7595d",
+  measurementId: "G-SEM93DSBQM"
+};
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
 </head>
 <body>
     <header>
@@ -16,8 +33,29 @@
             <li><a href="about.html">About</a></li>
             <li><a href="navigate.html">Navigate</a></li> 
             <li><a href="login.html">Login</a></li>
+     
         </ul>
-    </header>
-    <h1 class="center">Welcome to GroomedGlamour</h1>
+    </header> 
+
+           <!-- Google Sign-in Button -->
+           <li><button onclick="googleSignIn()">Sign in with Google</button></li>
+  
+    <!-- Your other HTML content goes here -->
+
+    <!-- JavaScript for Google Sign-in -->
+    <script>
+      function googleSignIn() {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+          .then((result) => {
+            // Signed in successfully, redirect or do something
+            console.log(result.user);
+          })
+          .catch((error) => {
+            // Handle errors here
+            console.error(error);
+          });
+      }
+    </script>
 </body>
 </html>
