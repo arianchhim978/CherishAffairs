@@ -2,7 +2,7 @@
  
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 0;
   font-style: normal;
 
 }
@@ -20,4 +20,20 @@ ul,a{
 a{
     text-decoration: none;
     color:white;
+}
+.center{
+    text-align: center;
+    margin-top:10%;
+}
+#card-container{
+    display:flex;
+    overflow-x: hidden;
+}
+.card{
+    transition: transform 0.3s ease;
+}
+.card img{
+    width:100%;
+    height:auto;
+
 }
