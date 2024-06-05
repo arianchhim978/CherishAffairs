@@ -42,3 +42,7 @@ button{
     width: 8.5rem;
     border-radius:8px;
 }
+.googlebutton{
+    text-align: center;
+    margin-top:40%;
+}
