@@ -63,3 +63,9 @@ body{
     width: 40%;
     border-radius: 10px;
 }
+.dress{
+    height:200px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
