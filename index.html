@@ -1,98 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GroomedGlamour</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .container1 {
-            position: relative;
-            width: 300px; /* Adjust as needed */
-            height: 400px; /* Adjust as needed */
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .container1 img {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-    </header>
-    <h1 class="center">Welcome to Groomed Glamour</h1>
-    <p class="p">Help your bride to be find the perfect dress!</p>
-    <div class="container1">
-        <img class='dress' src="wedmaid-dresses-E6WecF9asKA-unsplash.jpg">
-        <img class="dress" src="lunss-couture-H7p3eG4tiNw-unsplash.jpg">
-    </div>
-
-    <script>
-        const container = document.querySelector('.container1');
-        const dresses = document.querySelectorAll('.container1 img');
-        let startX;
-        let startY;
-        let isDragging = false;
-        let currentIndex = 0;
-
-        dresses.forEach((dress, index) => {
-            dress.addEventListener('mousedown', handleStart);
-            dress.addEventListener('touchstart', handleStart);
-
-            function handleStart(e) {
-                e.preventDefault();
-                startX = e.pageX || e.touches[0].pageX;
-                startY = e.pageY || e.touches[0].pageY;
-                isDragging = true;
-                currentIndex = index;
-            }
-
-            dress.addEventListener('mouseup', handleEnd);
-            dress.addEventListener('touchend', handleEnd);
-
-            function handleEnd(e) {
-                e.preventDefault();
-                isDragging = false;
-                const movedX = (e.pageX || e.changedTouches[0].pageX) - startX;
-                const movedY = (e.pageY || e.changedTouches[0].pageY) - startY;
-                if (Math.abs(movedX) > 50 || Math.abs(movedY) > 50) {
-                    dress.style.transform = 'translate(-1000px, 0)';
-                    setTimeout(() => {
-                        dress.style.display = 'none';
-                    }, 300);
-                } else {
-                    dress.style.transform = 'translate(0, 0)';
-                }
-            }
-
-            dress.addEventListener('mousemove', handleMove);
-            dress.addEventListener('touchmove', handleMove);
-
-            function handleMove(e) {
-                if (!isDragging) return;
-                const movedX = (e.pageX || e.touches[0].pageX) - startX;
-                const movedY = (e.pageY || e.touches[0].pageY) - startY;
-                dress.style.transform = `translate(${movedX}px, ${movedY}px)`;
-            }
-
-            dress.addEventListener('mouseleave', () => {
-                isDragging = false;
-            });
-        });
-    </script>
+    <p id="root"></p>
 </body>
+<script src="index.jsx" type="module"></script>
 </html>
