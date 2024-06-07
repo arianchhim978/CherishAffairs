@@ -1,0 +1,59 @@
+*{
+  
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+  
+  }
+  body{
+    background-color:black;
+  }
+  .center{
+    text-align:center;
+  }
+  ul  {
+    display:flex;
+    justify-content:end;
+    gap:20px;
+    list-style:none;
+    
+    
+  } 
+  header{
+    margin:0;
+    padding:10px;
+    background-color:black;
+    
+  }
+  ul a {
+    text-decoration:none;
+    color:white;
+    
+  }
+  #container {
+    position: relative;
+    width: calc(100% - 40px); /* Adjust width as needed */
+    overflow: hidden; /* Hide overflow to prevent images from overflowing */
+  }
+  
+  .a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.5s ease; /* Add transition for smooth movement */
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0; /* Adjust margin as needed */
+  }
+  
+  .icon,
+  .icon2 {
+    cursor: pointer;
+    /* Add any styles for the button icons */
+  }
+  
