@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <header>
-
-    </header>
-    <div onclick="burger()">
-    <img class='burger'src="hamburger.png">
+    <div class="box">
+        <img class="center" src="hamburger.png">
+        <h1 class="center">Groomed Glamour</h1>
+        <div id="container">
+            <img class='dress' src="aline.jpeg">
+            <img class='dress' src="ballgown.jpeg">
+            <img class='dress' src="sheath.jpeg">
+        </div>
+        <img id="dislike" onclick="handleDislike()" draggable="false" class='x' src="x-removebg-preview.png">
     </div>
-    <div class="container">
-        <img class='center'src="lunss-couture-H7p3eG4tiNw-unsplash.jpg">
-        <img class='center'src="wedmaid-dresses-E6WecF9asKA-unsplash.jpg">
-    </div>
+    <img id="like" onclick="handleLike()" draggable="false" class="check" src="green-check-mark-verified-circle-16223.png">
+    <script src="app.js"></script>
 </body>
 </html>

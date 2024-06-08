@@ -12,3 +12,81 @@ body{
 .center{
     
 }
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+  .burger{
+    display:none;
+
+  }
+  header{
+    
+
+  }
+ul {
+    display:flex;
+    list-style-type: none;
+    gap:20px;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+.dress{
+    height:400px;
+    width:300px;
+   
+    display:block;
+    position: absolute;
+    right:50%;
+    left:50%;
+    
+    overflow: hidden;
+    border:solid 10px white;
+    border-radius: 8px;
+  
+
+}
+.burger{
+  height:50px;
+}
+
+.center{
+  
+  height:50px;
+    text-align: center;
+    
+
+}
+.x{
+    height:50px;
+    position:absolute;
+    top:40%;
+    left:50%;
+    background-color:white;
+    border-radius: 50% ;
+    border:solid white 2px;
+}
+.check{
+    height:50px;
+    position: absolute;
+    top:40%;
+    left:60%;
+    background-color: white;
+    border-radius: 50%;
+    border:solid 2px white;
+}
+@media(max-width:600px){
+    .dress{
+        height:400px;
+        top:100%;
+       transform:translate(-50%,-170%);
+    }
+    .x{
+        transform:translate(-300%,400%);
+    }
+    .check{
+        transform:translate(130%,400%);
+    }
+}
